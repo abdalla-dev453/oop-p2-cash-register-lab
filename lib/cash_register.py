@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# Building a cash register, add items, apply discounts and void prvious transactions
 
 class CashRegister:
     def __init__(self, discount=0):
