@@ -18,7 +18,7 @@ class CashRegister:
     def add_item(self, item, price, quantity=1):
         self.total += price * quantity
         self.items.extend([item] * quantity)
-        self.last_transactions = price * quantity
+        self.previous_transactions = price * quantity
 
     def apply_discount(self):
         if self.discount > 0:
@@ -30,4 +30,4 @@ class CashRegister:
             print("There is no discount to apply.")
 
     def void_last_transaction(self):
-        self.total -= self.last_transactions
+        self.total -= self.previous_transactions
